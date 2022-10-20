@@ -18,7 +18,6 @@
         "confirmPassword": "#password-confirmation",
         "checkBox": "[type='checkbox']",
         "submitReg": "button[type='submit']"
-
     }
 
 
