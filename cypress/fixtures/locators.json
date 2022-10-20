@@ -8,6 +8,20 @@
     "header": {
         "loginButton": "a[href='/login']",
         "logoutButton": "a[role='button ']"
+    },
+
+    "register": {
+        "enterFirstName": "#first-name",
+        "enterLastName": "#last-name",
+        "enterEmail": "#email",
+        "enterPassword": "#password",
+        "confirmPassword": "#password-confirmation",
+        "checkBox": "[type='checkbox']",
+        "submitReg": "button[type='submit']"
+
     }
+
+
+    
 
 }

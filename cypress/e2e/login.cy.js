@@ -5,24 +5,32 @@ const locators = require('../fixtures/locators.json')
 
 describe('Login test cases', ()=>{
 
-    it('Go to gallery page', ()=>{
-        cy.visit('/')
+
+beforeEach('Go to gallery page and click login button', ()=>{
+    cy.visit('/')
+    cy.get(locators.header.loginButton).click()
     })
 
-    it('Go to login page', ()=>{
-        cy.get(locators.header.loginButton).click()
-    })
+    // it('Go to gallery page', ()=>{
+    //     cy.visit('/')
+    // })
+
+    // it('Go to login page', ()=>{
+    //     cy.get(locators.header.loginButton).click()
+    // })
 
     it('Login with valid credentials', ()=>{
         cy.get(locators.login.emailInput).type('kkk5@gmail.com')
         cy.get(locators.login.passwordinput).type('qwertyu1')
         cy.get(locators.login.submitButton).click()
+        cy.wait(2000)
+        cy.get(locators.header.logoutButton).click()
     })
 
     it('Logout', ()=>{
         //cy.get("a[role='button ']").click()
-        cy.wait(2000)
-        cy.get(locators.header.logoutButton).click()
+        // cy.wait(2000)
+        // cy.get(locators.header.logoutButton).click()
         //cy.get('[class="nav-link nav-buttons"]').first().click()
         //cy.get('[class="nav-link nav-buttons"]').eq(2).click()
     })

@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-
+const locators = require('../fixtures/locators.json')
 
 describe('Login test cases', ()=>{
 
@@ -9,13 +9,13 @@ describe('Login test cases', ()=>{
     })
 
     it('Login with valid credentials', ()=>{
-        cy.get('#first-name').type('pero')
-        cy.get('#last-name').type('peroo')
-        cy.get('#email').type('kkk7@gmail.com')
-        cy.get('#password').type('qwertyu2')
-        cy.get('#password-confirmation').type('qwertyu2')
-        cy.get("[type='checkbox']").check()
-        cy.get("button[type='submit']").click()
+        cy.get(locators.register.enterFirstName).type('pero')
+        cy.get(locators.register.enterLastName).type('peroo')
+        cy.get(locators.register.enterEmail).type('kkk8@gmail.com')
+        cy.get(locators.register.enterPassword).type('qwertyu2')
+        cy.get(locators.register.confirmPassword).type('qwertyu2')
+        cy.get(locators.register.checkBox).check()
+        cy.get(locators.register.submitReg).click()
     })
 
 
