@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 const locators = require('../fixtures/locators.json')
-
+import { faker } from '@faker-js/faker';
 
 describe('Login test cases', ()=>{
 
@@ -19,25 +19,25 @@ beforeEach('Go to gallery page and click login button', ()=>{
     //     cy.get(locators.header.loginButton).click()
     // })
 
-    it('Login with valid credentials', ()=>{
-        cy.get(locators.login.emailInput).type('kkk5@gmail.com')
-        cy.get(locators.login.passwordinput).type('qwertyu1')
-        cy.get(locators.login.submitButton).click()
-        cy.wait(2000)
-        cy.get(locators.header.logoutButton).click()
-    })
+    // it('Login with valid credentials', ()=>{
+    //     cy.get(locators.login.emailInput).type('kkk5@gmail.com')
+    //     cy.get(locators.login.passwordinput).type('qwertyu1')
+    //     cy.get(locators.login.submitButton).click()
+    //     cy.wait(2000)
+    //     cy.get(locators.header.logoutButton).click()
+    // })
 
-    it('Logout', ()=>{
+    //it('Logout', ()=>{
         //cy.get("a[role='button ']").click()
         // cy.wait(2000)
         // cy.get(locators.header.logoutButton).click()
         //cy.get('[class="nav-link nav-buttons"]').first().click()
         //cy.get('[class="nav-link nav-buttons"]').eq(2).click()
-    })
+    //})
 
 
     it('Login with invalid email', ()=>{
-        cy.get(locators.login.emailInput).clear().type('ftfyuiji')
+        cy.get(locators.login.emailInput).clear().type('faker.internet.email')
         cy.get('#password').clear().type('qwertyu1')
         cy.get("button[type='submit']").click()
     })
@@ -60,6 +60,19 @@ beforeEach('Go to gallery page and click login button', ()=>{
         cy.get('#password').clear().type('qqqqqqq1')
         cy.get("button[type='submit']").click()
     })
+
+
+    it('Login with valid credentials', ()=>{
+        cy.get(locators.login.emailInput).type('kkk5@gmail.com')
+        cy.get(locators.login.passwordinput).type('qwertyu1')
+        cy.get(locators.login.submitButton).click()
+        cy.wait(2000)
+        cy.get(locators.header.logoutButton).click()
+    })
+
+
+    
+
 
 
 })

@@ -19,8 +19,4 @@
         "checkBox": "[type='checkbox']",
         "submitReg": "button[type='submit']"
     }
-
-
-    
-
 }
