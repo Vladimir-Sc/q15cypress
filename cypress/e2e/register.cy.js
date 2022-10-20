@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+
+
 describe('Login test cases', ()=>{
 
     it('Go to gallery page', ()=>{

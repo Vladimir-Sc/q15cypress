@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 
+const locators = require('../fixtures/locators.json')
 
 
 describe('Login test cases', ()=>{
@@ -9,20 +10,21 @@ describe('Login test cases', ()=>{
     })
 
     it('Go to login page', ()=>{
-        cy.get('a[href="/login"]').click()
+        cy.get(locators.header.loginButton).click()
     })
 
     it('Login with valid credentials', ()=>{
-        cy.get('#email').type('kkk5@gmail.com')
-        cy.get('#password').type('qwertyu1')
-        cy.get("button[type='submit']").click()
+        cy.get(locators.login.emailInput).type('kkk5@gmail.com')
+        cy.get(locators.login.passwordinput).type('qwertyu1')
+        cy.get(locators.login.submitButton).click()
     })
 
     it('Logout', ()=>{
         //cy.get("a[role='button ']").click()
         cy.wait(2000)
+        cy.get(locators.header.logoutButton).click()
         //cy.get('[class="nav-link nav-buttons"]').first().click()
-        cy.get('[class="nav-link nav-buttons"]').eq(2).click()
+        //cy.get('[class="nav-link nav-buttons"]').eq(2).click()
     })
 
 
