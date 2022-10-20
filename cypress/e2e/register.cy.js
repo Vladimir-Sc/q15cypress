@@ -8,7 +8,7 @@ describe('Login test cases', ()=>{
         cy.visit('/register')
     })
 
-    it('Login with valid credentials', ()=>{
+    it('Register', ()=>{
         cy.get(locators.register.enterFirstName).type('pero')
         cy.get(locators.register.enterLastName).type('peroo')
         cy.get(locators.register.enterEmail).type('kkk8@gmail.com')
