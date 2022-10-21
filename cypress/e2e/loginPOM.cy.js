@@ -24,9 +24,7 @@ describe('Login test cases', () => {
         loginPage.login('danilo.todorovic@vivifyideas.com', faker.internet.password())
     })
            
-   it('Login with invalid password', () => {
-        loginPage.login('danilo.todorovic@vivifyideas.com', '123456')
-    })
+   
           
    it('Login with no password', () => {
         loginPage.login('danilo.todorovic@vivifyideas.com', "{backspace}")
