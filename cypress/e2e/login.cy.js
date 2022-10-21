@@ -37,7 +37,7 @@ beforeEach('Go to gallery page and click login button', ()=>{
 
 
     it('Login with invalid email', ()=>{
-        cy.get(locators.login.emailInput).clear().type('faker.internet.email')
+        cy.get(locators.login.emailInput).clear().type(faker.internet.email())
         cy.get('#password').clear().type('qwertyu1')
         cy.get("button[type='submit']").click()
     })
@@ -69,10 +69,6 @@ beforeEach('Go to gallery page and click login button', ()=>{
         cy.wait(2000)
         cy.get(locators.header.logoutButton).click()
     })
-
-
-    
-
 
 
 })
