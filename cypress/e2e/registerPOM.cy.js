@@ -50,7 +50,7 @@ it('Invalid password', ()=>{
         })
         
 
-        it.only('Check box not checked', ()=>{
+        it('Check box not checked', ()=>{
             registerPage.uncheckedBox(data.register.firstName, data.register.lastName, faker.internet.email(), data.register.passwrod, data.register.passwrod)
             general.erroMessage.should('be.visible')
             .and('have.text', 'The terms and conditions must be accepted.')
