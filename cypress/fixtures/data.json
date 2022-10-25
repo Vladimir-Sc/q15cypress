@@ -1,0 +1,27 @@
+{
+
+"headers": {
+
+    "allGalleries": "All Galleries",
+    "login": "Please login",
+    "register": "Register"
+
+},
+
+"errors":{
+
+},
+
+"register":{
+    "firstName": "a",
+    "invalidEmail1": "rrrr",
+    "invalidEmail2": "rrrr@rrrr",
+    "lastName": "b",
+    "eMail": "test1@gmail.com",
+    "passwrod": "qwertyu1",
+    "confpassword": "qwertyu1",
+    "invalidPassword": "rrr"
+}
+
+
+}
