@@ -38,6 +38,16 @@ class RegisterPage {
             this.checkBox.check()
             this.submitBut.click()
         }
+
+        uncheckedBox(firstname, lastname, email, pass, confpass,){
+            this.firtsName.type(firstname)
+            this.lastName.type(lastname)
+            this.eMail.type(email)
+            this.password.type(pass)
+            this.confiPass.type(confpass)
+            //this.checkBox.check()
+            this.submitBut.click()
+        }
 }
 
 export const registerPage = new RegisterPage ();
