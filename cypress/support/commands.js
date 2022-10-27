@@ -25,9 +25,9 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add('loginBackend', ()=>{
+Cypress.Commands.add('loginBackend', (email, password)=>{
     cy.request('POST', 'https://gallery-api.vivifyideas.com/api/auth/login', 
-            {email: "kkk5@gmail.com", password: "qwertyu1"}
+            {email, password: password}
             ).its('body').then(response=>{
             window.localStorage.setItem('token', response.access_token)
         //console.log(response)
