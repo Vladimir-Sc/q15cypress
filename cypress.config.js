@@ -10,9 +10,10 @@ module.exports = defineConfig({
     validEmail: 'kkk5@gmail.com',
     validPassword: 'qwertyu1',
     invalidEmail1: 'kkk3211@gmail.com',
-    invalidPassword: 'rrr'
-
-  },  
+    invalidPassword: 'rrr',
+    token: '',
+    galleryId: null
+    },  
 
     baseUrl: 'https://gallery-app.vivifyideas.com',
     watchForFileChanges: false
