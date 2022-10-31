@@ -12,6 +12,7 @@ module.exports = defineConfig({
     invalidEmail1: 'kkk3211@gmail.com',
     invalidPassword: 'rrr',
     token: '',
+    userId: null,
     galleryId: null
     },  
 
