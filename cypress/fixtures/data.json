@@ -4,7 +4,8 @@
 
     "allGalleries": "All Galleries",
     "login": "Please login",
-    "register": "Register"
+    "register": "Register",
+    "createGal": "Create Gallery"
 
 },
 
@@ -12,14 +13,21 @@
 
 },
 
+
+"loginValid": {
+    "email": "kkk55@gmail.com",
+    "password": "qwertzu1"
+},
+
+
 "register":{
-    "firstName": "a",
+    "firstName": "aaa",
     "invalidEmail1": "rrrr",
     "invalidEmail2": "rrrr@rrrr",
-    "lastName": "b",
-    "eMail": "test1@gmail.com",
-    "passwrod": "qwertyu1",
-    "confpassword": "qwertyu1",
+    "lastName": "bbb",
+    "eMail": "tes163@gmail.com",
+    "passwrod": "asdfghj1",
+    "confpassword": "asdfghj1",
     "invalidPassword": "rrr"
 }
 

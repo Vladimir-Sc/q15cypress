@@ -29,11 +29,11 @@ describe('Login test cases', () => {
         navigation.logoutButton.should('not.exist')
         navigation.loginButton.should('exist')
         cy.wait('@validLogin').then(intercept =>{
-            console.log(intercept)
+            console.log(intercept.response.statusCode)
             expect(intercept.response.statusCode).to.eq(200)
             expect(intercept.request.body.email).to.eq('danilo.todorovic@vivifyideas.com')
             expect(intercept.request.body.password).to.eq('Password1')
-            //console.log(intercept)
+            console.log(intercept.response)
         })
 
         cy.wait('@validLogout').its('response').then(response =>{
