@@ -51,7 +51,7 @@ describe('Login test cases', () => {
             .and('have.text', 'Bad Credentials')
             .and('have.css', 'background-color', 'rgb(248, 215, 218)')
             .and('have.css', 'color', 'rgb(114, 28, 36)')
-        //general.erroMessage.should('have.text', 'Bad Credentials')
+         //general.erroMessage.should('have.text', 'Bad Credentials')
     })
 
     it('Login with invalid password', () => {
