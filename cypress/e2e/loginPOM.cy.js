@@ -34,6 +34,7 @@ describe('Login test cases', () => {
             expect(intercept.request.body.email).to.eq('danilo.todorovic@vivifyideas.com')
             expect(intercept.request.body.password).to.eq('Password1')
             console.log(intercept.response)
+            console.log(intercept)
         })
 
         cy.wait('@validLogout').its('response').then(response =>{
