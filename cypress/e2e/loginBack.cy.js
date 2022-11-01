@@ -5,26 +5,32 @@ import { loginPage } from '../page_objects/loginPage'
 import { general } from '../page_objects/genaral'
 import data from '../fixtures/data.json'
 
-let token;
 
 describe('Login backend', () => {
     before('login with backend', () => {
-        cy.visit('/login')
-        cy.loginBackend2(data.loginValid.email, data.loginValid.password)
-    })
+        //valid user login
+        //cy.loginBackend1(data.loginValid.email, data.loginValid.password)
+        })
     
     
-    it.only('check if we are logged', ()=>{
-        cy.visit('/')
+    it.only('check if we are logged with invalid email', ()=>{
+        //invalid email, user doesn't exist
+        cy.loginBackend1(data.invalidLogin.email, data.invalidLogin.password).
+            then(response=>{
+                expect(response.status).to.eq(401)
+                expect(response.body.error).to.eq('Unauthorized')
+                })
+        
+        cy.visit('/my-galleries')
         navigation.logoutButton.should('exist')
     })
 
-        
-    it('invalidLogin', ()=>{
-            cy.visit('/login')
-            cy.invalidLoginBackend().then(response =>{
-                console.log(response)
-            })
-    })
-
 })
+
+
+
+
+// cy.on('uncaught:exception', (err, runnable) => {
+//     expect(err.message).to.include('500')
+//     return false
+//   })

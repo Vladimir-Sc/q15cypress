@@ -7,14 +7,15 @@ describe('Login backend', () => {
 
     
 beforeEach('set token in local storage', ()=>{
-        cy.visit('/register')
-        //window.localStorage.setItem('token', token)
-    })
+        //cy.visit('/register')
+        })
     
     it('valid registration', ()=>{
 
         cy.registerBack().then(resp=>{
-            expect(Cypress.env('userId')).to.eq(resp.body.user_id)})
+            console.log(resp)
+           // expect(Cypress.env('userId')).to.eq(resp.body.user_id)
+        })
         })
 
 })

@@ -19,13 +19,17 @@
     "password": "qwertyu1"
 },
 
+"invalidLogin": {
+    "email": "mnrfz48@gmail.com",
+    "password": "qwertyu1"
+},
 
 "register":{
     "firstName": "aaa",
     "invalidEmail1": "rrrr",
     "invalidEmail2": "rrrr@rrrr",
     "lastName": "bbb",
-    "email": "zcvv28@gmail.com",
+    "email": "zzccvv00@gmail",
     "passwrod": "asdfghj1",
     "confpassword": "asdfghj1",
     "terms": true,

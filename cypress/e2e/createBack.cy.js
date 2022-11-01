@@ -17,7 +17,6 @@ describe('create backend gallery', ()=>{
         
         cy.createGallery().then(resp=>{
             expect(Cypress.env('galleryId')).to.eq(resp.body.id)})
-            //general.header1.should('have.text', data.headers.createGal)
     })
 
 })

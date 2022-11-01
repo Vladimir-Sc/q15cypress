@@ -53,7 +53,6 @@ Cypress.Commands.add('addComment', ()=>{
 })
 
 
-//ovaj login radi 
 Cypress.Commands.add('loginBackend2', (email, password)=>{
     cy.request('POST', 'https://gallery-api.vivifyideas.com/api/auth/login', 
             {email, password}
@@ -61,10 +60,27 @@ Cypress.Commands.add('loginBackend2', (email, password)=>{
                 console.log(resp)
                 token = resp.body.access_token
                 console.log(token)
-                Cypress.env('token', token)     // save the token for use elsewhere
+                Cypress.env('token', token)    
                 console.log( Cypress.env('token'))
                 window.localStorage.setItem('token', Cypress.env('token'))
               })
+})
+
+
+Cypress.Commands.add('loginBackend1', (email, password)=>{
+  cy.request({ 
+      method: 'POST',
+      url: 'https://gallery-api.vivifyideas.com/api/auth/login',
+      body: {email, password},
+      failOnStatusCode: false
+  }).then(resp=>{
+    console.log(resp)
+                token = resp.body.access_token
+                console.log(token)
+                Cypress.env('token', token)     
+                console.log( Cypress.env('token'))
+                window.localStorage.setItem('token', Cypress.env('token'))
+  })
 })
 
 
@@ -134,13 +150,6 @@ Cypress.Commands.add('invalidLoginBackend', (email, password)=>{
     cy.request('POST','https://gallery-api.vivifyideas.com/api/auth/login',
            {email: Cypress.env('invalidEmail1'), password: Cypress.env('invalidPassword1') })
           .then(response=>{
-        //    window.localStorage.setItem('token', response.access_token)
-            console.log(response)
-       // console.log(window.localStorage.getItem('token'))
-
-        //window.localStorage.setItem('token', response.access_token)
-        //token = response.access_token
-        })
-
-        //window.localStorage.setItem('token', token)
+                console.log(response)
+                })
 })
